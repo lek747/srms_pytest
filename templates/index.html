@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>야 너두 파이썬?</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>야 너두 파이썬?</h1>
+    
+    <div id="question-box">
+      <h2>문제</h2>
+      <pre id="python-code">
+# 여기에 파이썬 코드가 표시됩니다.
+      </pre>
+    </div>
+
+    <div id="answer-box">
+      <label for="student-answer">예상 출력값을 입력하세요:</label><br>
+      <textarea id="student-answer" rows="4" cols="50" placeholder="예: Hello\nWorld"></textarea>
+    </div>
+
+    <div>
+      <button id="check-answer">정답 확인</button>
+    </div>
+
+    <div id="result-box">
+      <h3>결과</h3>
+      <p id="result-message"></p>
+      <p><strong>정답:</strong> <span id="correct-output"></span></p>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
